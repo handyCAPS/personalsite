@@ -1,5 +1,8 @@
 html {
   box-sizing: border-box;
+  font-family: 'Merriweather Sans', serif;
+  font-size: 100%;
+  line-height: 1.5;
 }
 
 *,
@@ -9,9 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Merriweather Sans', serif;
-  font-size: 100%;
-  background-color: #1d2437;
+  background-color: #eeeeee;
 }
 
 a {
@@ -19,12 +20,104 @@ a {
   color: #40e0d0;
 }
 
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 120%;
+  }
+}
+
 .nav--top {
-  background-color: #000;
+  background-color: #eeeeee;
+  position: sticky;
+  font-size: 1rem;
 }
 
 .nav::after {
   content: '';
   display: table;
   clear: both;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav--top .nav__list {
+  float: right;
+}
+
+.nav__item {
+}
+
+.nav__item.active {
+  border-bottom: 0.125em solid #40e0d0;
+}
+
+.nav--top .nav__item {
+  float: left;
+}
+
+.nav__link {
+  display: block;
+  padding: 0.75em 1.25em;
+}
+
+.main--main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 18rem [top-row] auto [bottom-row];
+}
+
+.main--main > * {
+  position: relative;
+  overflow-y: auto;
+}
+
+.top-left {
+  background-color: #705b71;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.top-right {
+  background-color: #8ca5bd;
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+
+.bottom-left {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-image: url('./public/img/waves.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.bottom-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #40e0d0;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.bottom-right {
+  background-color: #1d2437;
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+
+.text {
+  padding: 3rem;
+  /* width: 20rem;
+  margin: 0 auto; */
+  color: #f6f3f4;
 }
