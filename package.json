@@ -1,10 +1,14 @@
 {
-  "name": "timdoppenberg",
+  "name": "personelsite",
   "version": "1.0.0",
   "description": "My personal website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/handyCAPS/personelsite.git"
   },
   "author": "Tim Doppenberg",
   "license": "MIT"
