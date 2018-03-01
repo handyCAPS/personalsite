@@ -1,5 +1,5 @@
 {
-  "name": "personelsite",
+  "name": "personalsite",
   "version": "1.0.0",
   "description": "My personal website",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/handyCAPS/personelsite.git"
+    "url": "git+https://github.com/handyCAPS/personalsite.git"
   },
   "author": "Tim Doppenberg",
   "license": "MIT"
