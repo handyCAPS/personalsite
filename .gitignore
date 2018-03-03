@@ -1,2 +1,8 @@
 
 /public/img
+
+/node_modules
+
+/.cache
+
+/dist

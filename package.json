@@ -4,12 +4,15 @@
   "description": "My personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/handyCAPS/personalsite.git"
   },
   "author": "Tim Doppenberg",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "underscore": "^1.8.3"
+  }
 }
