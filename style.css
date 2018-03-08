@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: #1d2437;
 }
 
 a {
@@ -27,7 +27,7 @@ a {
 }
 
 .nav--top {
-  background-color: #eeeeee;
+  background-color: #1d2437;
   position: sticky;
   font-size: 1rem;
 }
@@ -91,9 +91,9 @@ a {
   grid-column-start: 1;
   grid-column-end: 4;
   background-color: #40e0d0;
-  background-image: url('./public/img/seastar.jpg');
+  /* background-image: url('./public/img/seastar.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
