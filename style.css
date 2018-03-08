@@ -1,3 +1,11 @@
+:root {
+  --color-mainBrand: #40e0d0;
+  --color-lightShade: #f6f3f4;
+  --color-lightAccent: #8ca5bd;
+  --color-darkAccent: #705b71;
+  --color-darkShade: #1d2437;
+}
+
 html {
   box-sizing: border-box;
   font-family: 'Merriweather Sans', serif;
@@ -12,12 +20,12 @@ html {
 }
 
 body {
-  background-color: #1d2437;
+  background-color: var(--color-darkShade, #1d2437);
 }
 
 a {
   text-decoration: none;
-  color: #40e0d0;
+  color: var(--color-mainBrand, #40e0d0);
 }
 
 @media screen and (min-width: 1400px) {
@@ -27,7 +35,7 @@ a {
 }
 
 .nav--top {
-  background-color: #1d2437;
+  background-color: var(--color-darkShade, #1d2437);
   position: sticky;
   font-size: 1rem;
 }
@@ -49,10 +57,26 @@ a {
 }
 
 .nav__item {
+  position: relative;
 }
 
 .nav__item.active {
-  border-bottom: 0.125em solid #40e0d0;
+  border-bottom: 0.125em solid var(--color-mainBrand, #40e0d0);
+}
+
+.nav__item:not(.active)::after {
+  content: '';
+  width: 0;
+  border-bottom: 0.125em solid var(--color-mainBrand, #40e0d0);
+  position: absolute;
+  bottom: -0.125em;
+  left: 50%;
+  transition: width 0.5s cubic-bezier(0.7, 0, 0, 1),
+    left 0.5s cubic-bezier(0.7, 0, 0, 1);
+}
+.nav__item:not(.active):hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .nav--top .nav__item {
@@ -82,7 +106,7 @@ a {
 }
 
 .top-right {
-  background-color: #8ca5bd;
+  background-color: var(--color-lightAccent, #8ca5bd);
   grid-column-start: 5;
   grid-column-end: 7;
 }
@@ -90,7 +114,7 @@ a {
 .bottom-left {
   grid-column-start: 1;
   grid-column-end: 4;
-  background-color: #40e0d0;
+  background-color: var(--color-mainBrand, #40e0d0);
   /* background-image: url('./public/img/seastar.jpg');
   background-size: cover;
   background-repeat: no-repeat; */
@@ -105,13 +129,13 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #40e0d0;
+  background-color: var(--color-mainBrand, #40e0d0);
   opacity: 0.3;
   z-index: -1;
 }
 
 .bottom-right {
-  background-color: #1d2437;
+  background-color: var(--color-darkShade, #1d2437);
   grid-column-start: 4;
   grid-column-end: 7;
 }
