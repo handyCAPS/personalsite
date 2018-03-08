@@ -13,6 +13,7 @@
   "author": "Tim Doppenberg",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^4.18.2",
     "underscore": "^1.8.3"
   },
   "dependencies": {
