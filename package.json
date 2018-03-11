@@ -13,7 +13,10 @@
   "author": "Tim Doppenberg",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.18.2",
+    "parcel-bundler": "^1.6.2",
     "underscore": "^1.8.3"
   },
   "dependencies": {

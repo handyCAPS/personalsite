@@ -7,4 +7,11 @@
 //   images.push(img);
 // }, 5000);
 
-import { vue } from 'vue';
+import Vue from 'vue/dist/vue.esm.js';
+
+new Vue({
+  el: '#first',
+  data: {
+    vuetext: 'Some text from Vue!'
+  }
+});

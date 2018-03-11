@@ -91,7 +91,7 @@ a {
 .main--main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 18rem [top-row] auto [bottom-row];
+  grid-template-rows: 18rem [top-row] 20rem [bottom-row];
 }
 
 .main--main > * {
