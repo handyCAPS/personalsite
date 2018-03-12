@@ -12,6 +12,6 @@ import Vue from 'vue/dist/vue.esm.js';
 new Vue({
   el: '#first',
   data: {
-    vuetext: 'Some text from Vue!'
+    text: 'Some text from Vue!'
   }
 });
