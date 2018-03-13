@@ -15,3 +15,17 @@ new Vue({
     text: 'Some text from Vue!'
   }
 });
+
+let lastPos = 0;
+
+window.addEventListener('scroll', e => {
+  let flag = false;
+  const currentPos = window.scrollY;
+  if (currentPos <= lastPos) {
+    window.setTimeout(() => {
+      console.log('end');
+    }, 50);
+  } else {
+    lastPos = currentPos;
+  }
+});
