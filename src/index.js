@@ -12,6 +12,7 @@ import Vue from 'vue/dist/vue.esm.js';
 new Vue({
   el: '#first',
   data: {
+    mainTitle: 'Tim Doppenberg',
     text: 'Some text from Vue!'
   }
 });
