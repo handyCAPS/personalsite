@@ -51,7 +51,7 @@
     <main class="main main--main">
       <section class="top-left">
         <article class="text text--intro" id="first">
-          <h1 >
+          <h1>
             {{ mainTitle }}
           </h1>
           <p>
@@ -69,10 +69,8 @@
           </p>
         </article>
       </section>
-      <section class="bottom-left" id="bottomLeft">
-        <article class="text text--intro">
-
-        </article>
+      <section class="bottom-left" id="bottomLeft" :style="styleObject" @mouseover="handleMouseOver">
+        <article class="text text--intro">{{ styleObject }}</article>
       </section>
       <section class="bottom-right">
         <article class="text text--intro">
