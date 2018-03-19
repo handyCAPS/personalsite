@@ -1,5 +1,6 @@
 :root {
-  --color-mainBrand: #40e0d0;
+  --hue-mainBrand: 174;
+  --color-mainBrand: hsl(var(--hue-mainBrand), 72%, 56%);
   --color-lightShade: #f6f3f4;
   --color-lightAccent: #8ca5bd;
   --color-darkAccent: #705b71;
@@ -111,7 +112,7 @@ h6 {
 .main--main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 18rem [top-row] 20rem [bottom-row];
+  grid-template-rows: minmax(20rem, 50vh) [top-row] minmax(20rem, 50vh) [bottom-row];
 }
 
 .main--main > * {

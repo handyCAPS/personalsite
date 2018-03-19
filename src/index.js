@@ -47,18 +47,16 @@ new Vue({
         ? 400
         : Math.max(400, 200 + Math.round(this.mousePos.x / 100) * 100);
     },
-    getImage(index) {
-      let width = 400;
-      let height = 300;
+    setImage(index) {
       if (!this.timedout) {
-        width = 200 + index * 100;
-        height = Math.round(width * 0.75 / 100) * 100;
+        const width = 200 + index * 100;
+        const height = Math.round(width * 0.75 / 100) * 100;
         this.timedout = true;
         window.setTimeout(() => {
           this.timedout = false;
         }, 5000);
+        this.imageString = `https://placecage.com/${width}/${height}`;
       }
-      return `https://placecage.com/${width}/${height}`;
     }
   },
   data() {
@@ -67,14 +65,15 @@ new Vue({
         x: 0,
         y: 0
       },
-      timedout: false
+      timedout: false,
+      imageString: 'https://placecage.com/400/300'
     };
   },
   computed: {
     styleObject() {
-      const image = this.getImage(Math.round(this.mousePos.x / 100));
+      this.setImage(Math.round(this.mousePos.x / 100));
       return {
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${this.imageString})`,
         backgroundSize: 'cover'
       };
     }
